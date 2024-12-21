@@ -1,3 +1,3 @@
-# Installation of VitePress
+# 安裝VitePress開發環境: WSL2 & VSCode Dev Containers
 
-### Prerequisites
+## WSL2の設定

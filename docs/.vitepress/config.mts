@@ -7,12 +7,10 @@ const vitePressConfigs = {
   title: 'miksinote',
   titleTemplate: ':title | miksinote',
   description: 'Miksin\'s note site',
-  lang: 'en-US',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
       { text: 'Notes', link: '/notes', activeMatch: '^/notes' },
       { text: 'About', link: '/about' },
     ],
@@ -23,6 +21,21 @@ const vitePressConfigs = {
 
     search: {
       provider: 'local',
+    },
+  },
+
+  locales: {
+    root: {
+      lang: 'zh-TW',
+      label: '繁體中文',
+    },
+    en: {
+      lang: 'en-US',
+      label: 'English',
+    },
+    jp: {
+      lang: 'ja-JP',
+      label: '日本語',
     },
   },
 } satisfies UserConfig<DefaultTheme.Config>
