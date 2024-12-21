@@ -188,14 +188,14 @@ pnpm run docs:dev
 
 這裡我注意到它預設不會附上`.gitignore`檔案，所以我自己追加了
 
-```gitignore
+```
 .pnpm-store
 node_modules/
 ```
 
 `/docs`資料夾裡也附上一個
 
-```.gitignore
+```
 .vitepress/cache
 .vitepress/dist
 ```

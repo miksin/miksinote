@@ -188,14 +188,14 @@ You should see the default screen
 
 I noticed it doesn't include a `.gitignore` file by default, so I added one
 
-```gitignore
+```
 .pnpm-store
 node_modules/
 ```
 
 Also add one in the `/docs` folder
 
-```.gitignore
+```
 .vitepress/cache
 .vitepress/dist
 ```

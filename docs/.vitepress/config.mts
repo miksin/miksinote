@@ -9,12 +9,6 @@ const vitePressConfigs = {
   description: 'Miksin\'s note site',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Notes', link: '/notes', activeMatch: '^/notes' },
-      { text: 'About', link: '/about' },
-    ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/miksin' },
     ],
@@ -28,14 +22,35 @@ const vitePressConfigs = {
     root: {
       lang: 'zh-TW',
       label: '繁體中文',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'Notes', link: '/notes', activeMatch: '^/notes' },
+          { text: 'About', link: '/about' },
+        ],
+      },
     },
     en: {
       lang: 'en-US',
       label: 'English',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en' },
+          { text: 'Notes', link: '/en/notes', activeMatch: '^/en/notes' },
+          { text: 'About', link: '/en/about' },
+        ],
+      },
     },
     jp: {
       lang: 'ja-JP',
       label: '日本語',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/jp' },
+          { text: 'Notes', link: '/jp/notes', activeMatch: '^/jp/notes' },
+          { text: 'About', link: '/jp/about' },
+        ],
+      },
     },
   },
 } satisfies UserConfig<DefaultTheme.Config>
@@ -44,5 +59,17 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
   documentRootPath: '/docs',
   scanStartPath: 'notes',
   resolvePath: '/notes/',
+  useTitleFromFileHeading: true,
+}, {
+  documentRootPath: '/docs',
+  scanStartPath: '/en/notes',
+  resolvePath: '/en/',
+  basePath: '/',
+  useTitleFromFileHeading: true,
+}, {
+  documentRootPath: '/docs',
+  scanStartPath: '/jp/notes',
+  resolvePath: '/jp/',
+  basePath: '/',
   useTitleFromFileHeading: true,
 }]))
