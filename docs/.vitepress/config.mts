@@ -16,6 +16,13 @@ const vitePressConfigs = {
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: {
+      light: '/logo-light.svg',
+      dark: '/logo-dark.svg',
+      alt: 'Logo',
+    },
+    siteTitle: false,
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/miksin' },
     ],
