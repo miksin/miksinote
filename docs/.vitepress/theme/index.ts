@@ -1,8 +1,9 @@
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import './style.css'
+import './fonts/font.css'
 
 export default {
   extends: DefaultTheme,
