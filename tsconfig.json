@@ -18,7 +18,8 @@
     "docs/.vitepress/*.mts",
     "docs/.vitepress/theme/*.ts",
     "docs/.vitepress/theme/**/*.ts",
-    "docs/.vitepress/theme/**/*.vue"
+    "docs/.vitepress/theme/**/*.vue", 
+    "docs/.vitepress/theme/posts.data.mts"
   ],
   "exclude": [
     "node_modules",

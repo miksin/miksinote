@@ -1,24 +1,15 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+title: miksinote
+titleTemplate: Miksin's note site
 hero:
-  name: "Miksinote"
   text: "Miksin's note site"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  tagline: 程式、技術筆記
 ---
+
+<NotesPreview />
+
+<script setup lang="ts">
+import NotesPreview from './.vitepress/components/NotesPreview.vue'
+</script>
