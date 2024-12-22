@@ -46,7 +46,7 @@ const vitePressConfigs = {
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Notes', link: '/notes', activeMatch: '^/notes' },
+          { text: 'Notes', link: '/notes/vitepress', activeMatch: '^/notes' },
           { text: 'About', link: '/about' },
         ],
       },
@@ -57,7 +57,7 @@ const vitePressConfigs = {
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en' },
-          { text: 'Notes', link: '/en/notes', activeMatch: '^/en/notes' },
+          { text: 'Notes', link: '/en/notes/vitepress', activeMatch: '^/en/notes' },
           { text: 'About', link: '/en/about' },
         ],
       },
@@ -68,7 +68,7 @@ const vitePressConfigs = {
       themeConfig: {
         nav: [
           { text: 'Home', link: '/jp' },
-          { text: 'Notes', link: '/jp/notes', activeMatch: '^/jp/notes' },
+          { text: 'Notes', link: '/jp/notes/vitepress', activeMatch: '^/jp/notes' },
           { text: 'About', link: '/jp/about' },
         ],
       },
@@ -81,16 +81,19 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
   scanStartPath: 'notes',
   resolvePath: '/notes/',
   useTitleFromFileHeading: true,
+  useFolderLinkFromIndexFile: true,
 }, {
   documentRootPath: '/docs',
   scanStartPath: '/en/notes',
   resolvePath: '/en/',
   basePath: '/',
   useTitleFromFileHeading: true,
+  useFolderLinkFromIndexFile: true,
 }, {
   documentRootPath: '/docs',
   scanStartPath: '/jp/notes',
   resolvePath: '/jp/',
   basePath: '/',
   useTitleFromFileHeading: true,
+  useFolderLinkFromIndexFile: true,
 }]))

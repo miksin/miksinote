@@ -1,9 +1,9 @@
 ---
-title: 'Install VitePress Development Environment and Deployment: Step-by-Step Record'
+title: Development Environment and Deployment
 date: 2024-12-21
 ---
 
-# Install VitePress Development Environment and Deployment: Step-by-Step Record
+# Development Environment and Deployment
 
 [[toc]]
 
