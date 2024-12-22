@@ -82,6 +82,7 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
   resolvePath: '/notes/',
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
+  useFolderTitleFromIndexFile: true,
 }, {
   documentRootPath: '/docs',
   scanStartPath: '/en/notes',
@@ -89,6 +90,7 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
   basePath: '/',
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
+  useFolderTitleFromIndexFile: true,
 }, {
   documentRootPath: '/docs',
   scanStartPath: '/jp/notes',
@@ -96,4 +98,5 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
   basePath: '/',
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
+  useFolderTitleFromIndexFile: true,
 }]))
