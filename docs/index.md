@@ -5,7 +5,7 @@ title: miksinote
 titleTemplate: Miksin's note site
 hero:
   text: "Miksin's note site"
-  tagline: 程式、技術筆記
+  tagline: 程式・開發學習筆記
 ---
 
 <NotesPreview />

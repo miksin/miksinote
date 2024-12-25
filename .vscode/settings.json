@@ -3,7 +3,6 @@
   "vue.server.hybridMode": true,
   "vue.server.includeLanguages": ["vue", "markdown"],
   // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
   "editor.formatOnSave": false,
 
   // Auto fix
