@@ -34,6 +34,8 @@ import { h } from 'vue'
 npm install
 ```
 
+## README.md裡的海量錯誤
+
 我希望vue的型態檢查也作用在`/docs`裡面的`.md`檔案，因此有了這樣的設定：
 
 ```json

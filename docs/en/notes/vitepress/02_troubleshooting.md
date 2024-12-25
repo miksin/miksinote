@@ -5,6 +5,8 @@ date: 2024-12-25
 
 # Troubleshooting
 
+[[toc]]
+
 The installation is complete, and development can proceed, but there are still some minor issues to resolve.
 
 ## Cannot find vue package
