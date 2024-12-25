@@ -21,6 +21,13 @@ const vitePressConfigs = {
     ],
   ],
 
+  markdown: {
+    theme: {
+      light: 'one-light',
+      dark: 'one-dark-pro',
+    },
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
