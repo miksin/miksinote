@@ -14,7 +14,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "docs/**/*.md",
+    "**/*.md",
     "docs/.vitepress/*.mts",
     "docs/.vitepress/theme/*.ts",
     "docs/.vitepress/theme/**/*.ts",
