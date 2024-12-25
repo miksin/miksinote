@@ -17,13 +17,11 @@
 
 # miksinote 📝
 
-> Miksin's note site
+> Study notes focused on coding, primarily in frontend development.
 
 - 🌏 繁體中文 / English / 日本語
 - 🌓 Dark mode
 - 🍱 Dev Containers
-
-Study notes focused on coding, primarily in frontend development.
 
 ## Development
 
