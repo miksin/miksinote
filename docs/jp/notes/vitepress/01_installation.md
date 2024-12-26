@@ -258,7 +258,7 @@ Environment variables:
 
 https://note.miksin.art/
 
-## 参考文献
+## References
 
 - [VitePress](https://vitepress.dev/)
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
