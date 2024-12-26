@@ -24,7 +24,7 @@ const vitePressConfigs = {
   markdown: {
     theme: {
       light: 'one-light',
-      dark: 'one-dark-pro',
+      dark: 'plastic',
     },
   },
 
