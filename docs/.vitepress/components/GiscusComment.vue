@@ -1,9 +1,17 @@
 <script lang="ts" setup>
 import Giscus from '@giscus/vue'
 import { useData, useRoute } from 'vitepress'
+import { computed } from 'vue'
 
 const route = useRoute()
-const { isDark } = useData()
+const { isDark, lang } = useData()
+const displayLang = computed(() => {
+  if (lang.value === 'en-US')
+    return 'en'
+  if (lang.value === 'ja-JP')
+    return 'ja'
+  return 'zh-TW'
+})
 </script>
 
 <template>
@@ -21,7 +29,7 @@ const { isDark } = useData()
       emit-metadata="0"
       input-position="top"
       :theme="isDark ? 'dark' : 'light'"
-      lang="zh-TW"
+      :lang="displayLang"
       loading="lazy"
     />
   </div>
