@@ -15,9 +15,13 @@ First, enable the Discussion feature in GitHub settings
 
 `(Repository Page) > Settings > General > Features > Discussions`
 
+![github settings](https://i.imgur.com/v7sIMLn.png)
+
 ### Configure Giscus App
 
 Install the [giscus GitHub App](https://github.com/apps/giscus) and authorize the repository for giscus
+
+![giscus GitHub App](https://i.imgur.com/w0pAO3E.png)
 
 Then go to [giscus.app](https://giscus.app/) for initial setup
 
@@ -116,6 +120,8 @@ export default {
 ```
 
 Success! Try leaving a comment
+
+![giscus success](https://i.imgur.com/gMzwIAZ.png)
 
 ### Auto-Switch Interface Language
 

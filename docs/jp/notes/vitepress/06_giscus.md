@@ -9,15 +9,19 @@ date: 2024-12-26
 
 ## Giscusを有効にする
 
-### ディスカッション機能を有効にする
+### Discussions機能を有効にする
 
-まず、GitHubの設定でディスカッション機能を有効にします
+まず、GitHubの設定でDiscussions機能を有効にします
 
-`(リポジトリページ) > 設定 > 一般 > 機能 > ディスカッション`
+`(Repository Page) > Settings > General > Features > Discussions`
 
-### Giscusアプリを設定する
+![github settings](https://i.imgur.com/v7sIMLn.png)
 
-[giscus GitHubアプリ](https://github.com/apps/giscus)をインストールし、リポジトリに対してgiscusを認可します
+### Giscus Appを設定する
+
+[giscus GitHub App](https://github.com/apps/giscus)をインストールし、リポジトリに対してgiscusを認可します
+
+![giscus GitHub App](https://i.imgur.com/w0pAO3E.png)
 
 次に、[giscus.app](https://giscus.app/)にアクセスして初期設定を行います
 
@@ -116,6 +120,8 @@ export default {
 ```
 
 成功です！コメントを残してみてください
+
+![giscus success](https://i.imgur.com/gMzwIAZ.png)
 
 ### インターフェース言語の自動切り替え
 
