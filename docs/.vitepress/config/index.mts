@@ -6,7 +6,7 @@ import { withSidebar } from 'vitepress-sidebar'
 const vitePressConfigs = {
   title: 'miksinote',
   titleTemplate: ':title | miksinote',
-  description: 'Miksin\'s note site',
+  description: 'Explore Miksin\'s comprehensive notes on various topics, including VitePress, programming, and more.',
   lastUpdated: true,
 
   head: [
