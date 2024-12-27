@@ -15,13 +15,13 @@ date: 2024-12-26
 
 `(Repository Page) > Settings > General > Features > Discussions`
 
-![github settings](https://i.imgur.com/v7sIMLn.png)
+![github settings](https://cdn.miksin.art/miksinote/img/notes/vitepress/06_giscus/github_enable_discussions.webp)
 
 ### 設定Giscus App
 
 安裝[giscus GitHub App](https://github.com/apps/giscus)並授權該repository給giscus
 
-![giscus GitHub App](https://i.imgur.com/w0pAO3E.png)
+![giscus GitHub App](https://cdn.miksin.art/miksinote/img/notes/vitepress/06_giscus/github_giscus_app.webp)
 
 接著來到[giscus.app](https://giscus.app/)做初步設定
 
@@ -121,7 +121,7 @@ export default {
 
 成功！嘗試留言看看
 
-![giscus success](https://i.imgur.com/gMzwIAZ.png)
+![giscus success](https://cdn.miksin.art/miksinote/img/notes/vitepress/06_giscus/giscus_success.webp)
 
 ### 界面語言自動切換
 
