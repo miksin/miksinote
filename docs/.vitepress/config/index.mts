@@ -7,6 +7,7 @@ const vitePressConfigs = {
   title: 'miksinote',
   titleTemplate: ':title | miksinote',
   description: 'Miksin\'s note site',
+  lastUpdated: true,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -36,13 +37,19 @@ const vitePressConfigs = {
       alt: 'Logo',
     },
     siteTitle: false,
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/miksin' },
     ],
-
     search: {
       provider: 'local',
+    },
+    lastUpdated: {
+      text: 'Last Updated',
+      formatOptions: {
+        month: 'short',
+        year: 'numeric',
+        day: 'numeric',
+      },
     },
   },
 
