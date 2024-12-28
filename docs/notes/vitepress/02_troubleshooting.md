@@ -5,6 +5,14 @@ date: 2024-12-25
 
 # 故障排除
 
+> AI生成摘要
+
+<!-- excerpt -->
+
+這篇文章介紹了在使用VitePress開發過程中遇到的兩個主要問題及其解決方案。首先是VSCode無法找到已安裝的vue package，通過切換到npm解決了這個問題。其次是`README.md`中出現大量TypeScript錯誤訊息，通過調整`tsconfig.json`的include範圍解決了這個問題。
+
+<!-- excerpt -->
+
 [[toc]]
 
 裝是裝好了，也能運作開發了，但還有一些小問題需要排除

@@ -5,6 +5,14 @@ date: 2024-12-26
 
 # Giscus
 
+> AI生成摘要
+
+<!-- excerpt -->
+
+本文介紹如何在VitePress中啟用和設置Giscus評論系統。步驟包括在GitHub開啟Discussion功能、安裝giscus GitHub App、在giscus.app進行設定、安裝Giscus的Vue Component、配置GiscusComment.vue元件，並將其添加到VitePress主題中，實現界面語言自動切換。
+
+<!-- excerpt -->
+
 [[toc]]
 
 ## 啟用Giscus

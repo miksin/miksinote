@@ -5,6 +5,14 @@ date: 2024-12-27
 
 # 使用CloudFlare R2作為部落格圖床
 
+> AI生成摘要
+
+<!-- excerpt -->
+
+本文介紹如何使用CloudFlare R2作為部落格圖床，包括將圖片轉為webp格式、創建bucket、設定custom domain、使用rclone上傳圖片等步驟，並提供相關工具的安裝與配置指南。
+
+<!-- excerpt -->
+
 [[toc]]
 
 本文主要以[此文章](https://ivonblog.com/posts/cloudflare-r2-image-hosting/)作為參考

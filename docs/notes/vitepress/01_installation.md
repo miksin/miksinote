@@ -5,6 +5,14 @@ date: 2024-12-21
 
 # 安裝開發環境與部屬
 
+> AI生成摘要
+
+<!-- excerpt -->
+
+本文介紹如何在Windows 11環境下使用WSL2安裝Docker，並在VSCode中配置Dev Containers進行開發。接著，說明如何生成並配置VitePress專案，最後介紹如何將專案部屬到CloudFlare Pages。
+
+<!-- excerpt -->
+
 [[toc]]
 
 ### 環境

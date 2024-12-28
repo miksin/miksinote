@@ -14,10 +14,12 @@ declare const data: Post[]
 export { data }
 
 export default createContentLoader('notes/**/*.md', {
-  excerpt: true,
+  excerpt: (file) => {
+    file.excerpt = file.content.split('<!-- excerpt -->')[1]
+  },
   transform(raw): Post[] {
     return raw
-      .filter(({ frontmatter }) => !!frontmatter.title)
+      .filter(({ frontmatter, excerpt }) => !!frontmatter.title && !!excerpt)
       .map(({ url, frontmatter, excerpt }) => ({
         title: frontmatter.title,
         url,
@@ -25,6 +27,7 @@ export default createContentLoader('notes/**/*.md', {
         date: formatDate(frontmatter.date),
       }))
       .sort((a, b) => b.date.time - a.date.time)
+      .slice(0, 10)
   },
 })
 
