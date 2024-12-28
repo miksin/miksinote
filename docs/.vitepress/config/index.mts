@@ -1,6 +1,7 @@
 import type { DefaultTheme, UserConfig } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
+import { seoConfigs } from './seo'
 
 // https://vitepress.dev/reference/site-config
 const vitePressConfigs = {
@@ -20,12 +21,9 @@ const vitePressConfigs = {
       'link',
       { href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap', rel: 'stylesheet' },
     ],
-    ['link', { rel: 'canonical', href: 'https://note.miksin.art' }],
   ],
 
-  sitemap: {
-    hostname: 'https://note.miksin.art',
-  },
+  ...seoConfigs,
 
   markdown: {
     theme: {
