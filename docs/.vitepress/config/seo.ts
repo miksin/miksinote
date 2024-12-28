@@ -8,6 +8,7 @@ export const seoConfigs = {
     const canonicalUrl = `https://note.miksin.art/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html')
+
     pageData.frontmatter.head ??= []
     pageData.frontmatter.head.push([
       'link',
@@ -84,7 +85,7 @@ export const seoConfigs = {
       },
     ]
 
-    const metaItems = [...ogMeta, twitterMeta]
+    const metaItems = [...ogMeta, ...twitterMeta]
 
     pageData.frontmatter.head.push(...metaItems.map(item => ['meta', item]))
   },
