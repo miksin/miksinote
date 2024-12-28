@@ -52,6 +52,10 @@ export const seoConfigs = {
         property: 'og:url',
         content: canonicalUrl,
       },
+      {
+        property: 'og:type',
+        content: 'article',
+      },
     ]
 
     const twitterMeta = [
