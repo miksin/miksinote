@@ -5,6 +5,14 @@ date: 2024-12-25
 
 # Troubleshooting
 
+> AI-generated summary
+
+<!-- excerpt -->
+
+This article introduces two main issues encountered during the development process with VitePress and their solutions. First, VSCode could not find the installed vue package, which was resolved by switching to npm. Second, there were numerous TypeScript error messages in `README.md`, which were resolved by adjusting the `include` scope in `tsconfig.json`.
+
+<!-- excerpt -->
+
 [[toc]]
 
 The installation is complete, and development can proceed, but there are still some minor issues to resolve.

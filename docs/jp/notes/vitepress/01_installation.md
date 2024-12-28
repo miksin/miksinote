@@ -5,6 +5,14 @@ date: 2024-12-21
 
 # 開発環境設定とデプロイ
 
+> AI生成の要約
+
+<!-- excerpt -->
+
+この記事では、Windows 11環境でWSL2を使用してDockerをインストールし、開発用にVSCodeでDev Containersを設定し、VitePressプロジェクトを生成および設定し、最終的にプロジェクトをCloudFlare Pagesにデプロイする方法を説明します。
+
+<!-- excerpt -->
+
 [[toc]]
 
 ### 環境

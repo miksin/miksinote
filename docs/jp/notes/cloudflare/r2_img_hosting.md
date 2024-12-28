@@ -5,6 +5,14 @@ date: 2024-12-27
 
 # CloudFlare R2を使ったブログ画像ホスティング
 
+> AI生成の要約
+
+<!-- excerpt -->
+
+この記事では、CloudFlare R2をブログ画像ホスティングサービスとして使用する方法を紹介します。画像をWebP形式に変換する手順、バケットの作成、カスタムドメインの設定、rcloneを使用した画像のアップロード、関連ツールのインストールおよび設定ガイドを含みます。
+
+<!-- excerpt -->
+
 [[toc]]
 
 この記事は主に[この投稿](https://ivonblog.com/posts/cloudflare-r2-image-hosting/)に基づいています。

@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import { data as posts } from '../theme/posts.data.mjs'
+import { computed } from 'vue'
+import { data as enNotes } from '../theme/notes-en.data.mjs'
+import { data as jpNotes } from '../theme/notes-jp.data.mjs'
+import { data as rootNotes } from '../theme/notes.data.mjs'
+
+const { locale } = defineProps({
+  locale: String,
+})
+
+const notes = computed(() => {
+  if (locale === 'en') {
+    return enNotes
+  }
+  if (locale === 'jp') {
+    return jpNotes
+  }
+  return rootNotes
+})
 </script>
 
 <template>
   <h3>Recents</h3>
   <div :class="$style.container">
-    <div v-for="post in posts" :key="post.url" :class="$style.block">
-      <a :href="post.url">
-        {{ post.title }}
+    <div v-for="note in notes" :key="note.url" :class="$style.block">
+      <a :href="note.url">
+        {{ note.title }}
       </a>
-      <div v-html="post.excerpt" />
+      <div v-html="note.excerpt" />
       <div :class="$style.timestamp">
-        {{ post.date.string }}
+        {{ note.date.string }}
       </div>
     </div>
   </div>

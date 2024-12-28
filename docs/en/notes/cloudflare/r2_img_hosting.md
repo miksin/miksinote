@@ -5,6 +5,14 @@ date: 2024-12-27
 
 # Using CloudFlare R2 for Blog Image Hosting
 
+> AI-generated summary
+
+<!-- excerpt -->
+
+This article introduces how to use CloudFlare R2 as a blog image hosting service, including steps to convert images to webp format, create a bucket, set up a custom domain, upload images using rclone, and provides installation and configuration guides for related tools.
+
+<!-- excerpt -->
+
 [[toc]]
 
 This article is mainly based on [this post](https://ivonblog.com/posts/cloudflare-r2-image-hosting/).

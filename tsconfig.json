@@ -19,7 +19,7 @@
     "docs/.vitepress/theme/*.ts",
     "docs/.vitepress/theme/**/*.ts",
     "docs/.vitepress/theme/**/*.vue"
-  ],
+, "docs/.vitepress/util/postLoader.ts"  ],
   "exclude": [
     "node_modules",
     "resource"

@@ -8,8 +8,8 @@ hero:
   tagline: 程式・開發學習筆記
 ---
 
-<NotesPreview />
+<RecentNotes />
 
 <script setup lang="ts">
-import NotesPreview from './.vitepress/components/NotesPreview.vue'
+import RecentNotes from './.vitepress/components/RecentNotes.vue'
 </script>

@@ -5,6 +5,14 @@ date: 2024-12-26
 
 # Giscus
 
+> AI生成の要約
+
+<!-- excerpt -->
+
+この記事では、VitePressでGiscusコメントシステムを有効にして設定する方法を紹介します。手順には、GitHubでDiscussions機能を有効にすること、giscus GitHub Appをインストールすること、giscus.appで設定を行うこと、Giscus Vueコンポーネントをインストールすること、GiscusComment.vueコンポーネントを設定すること、そして自動インターフェース言語切り替えを実現するためにVitePressテーマに追加することが含まれます。
+
+<!-- excerpt -->
+
 [[toc]]
 
 ## Giscusを有効にする

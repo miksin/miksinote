@@ -5,6 +5,14 @@ date: 2024-12-26
 
 # Giscus
 
+> AI-generated summary
+
+<!-- excerpt -->
+
+This article introduces how to enable and set up the Giscus comment system in VitePress. The steps include enabling the Discussion feature on GitHub, installing the giscus GitHub App, configuring settings on giscus.app, installing the Giscus Vue Component, configuring the GiscusComment.vue component, and adding it to the VitePress theme to achieve automatic interface language switching.
+
+<!-- excerpt -->
+
 [[toc]]
 
 ## Enable Giscus

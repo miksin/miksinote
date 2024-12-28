@@ -8,8 +8,8 @@ hero:
   tagline: "Study notes focused on coding"
 ---
 
-<NotesPreview />
+<NotesPreview locale="en" />
 
 <script setup lang="ts">
-import NotesPreview from '../.vitepress/components/NotesPreview.vue'
+import NotesPreview from '../.vitepress/components/RecentNotes.vue'
 </script>

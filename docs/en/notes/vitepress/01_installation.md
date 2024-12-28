@@ -5,6 +5,14 @@ date: 2024-12-21
 
 # Development Environment and Deployment
 
+> AI-generated summary
+
+<!-- excerpt -->
+
+This article explains how to install Docker using WSL2 on a Windows 11 environment, configure Dev Containers in VSCode for development, generate and configure a VitePress project, and finally deploy the project to CloudFlare Pages.
+
+<!-- excerpt -->
+
 [[toc]]
 
 ### Environment
