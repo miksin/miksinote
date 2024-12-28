@@ -23,6 +23,10 @@ const vitePressConfigs = {
     ['link', { rel: 'canonical', href: 'https://note.miksin.art' }],
   ],
 
+  sitemap: {
+    hostname: 'https://note.miksin.art',
+  },
+
   markdown: {
     theme: {
       light: 'one-light',
