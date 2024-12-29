@@ -64,7 +64,7 @@ const vitePressConfigs = {
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Notes', link: '/notes/vitepress', activeMatch: '^/notes' },
-          { text: 'About', link: '/about' },
+          { text: 'Profile', link: '/profile' },
         ],
       },
     },
@@ -75,7 +75,7 @@ const vitePressConfigs = {
         nav: [
           { text: 'Home', link: '/en' },
           { text: 'Notes', link: '/en/notes/vitepress', activeMatch: '^/en/notes' },
-          { text: 'About', link: '/en/about' },
+          { text: 'Profile', link: '/en/profile' },
         ],
       },
     },
@@ -86,7 +86,7 @@ const vitePressConfigs = {
         nav: [
           { text: 'Home', link: '/jp' },
           { text: 'Notes', link: '/jp/notes/vitepress', activeMatch: '^/jp/notes' },
-          { text: 'About', link: '/jp/about' },
+          { text: 'Profile', link: '/jp/profile' },
         ],
       },
     },
