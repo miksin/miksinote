@@ -1,6 +1,6 @@
 ---
 title: Profile
-layout: home
+layout: page
 ---
 
 <div :class="$style.page">

@@ -1,6 +1,12 @@
 <template>
   <div :class="$style.grid">
-    <a :class="[$style.box, $style['filled--avatar']]" style="grid-area: a" href="https://github.com/miksin" target="_blank" rel="noopener noreferrer" />
+    <a
+      :class="[$style.box, $style['filled--avatar']]"
+      style="grid-area: a; --link-text: 'GitHub';"
+      href="https://github.com/miksin"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
     <div :class="[$style.box, $style['filled--cyan-3']]" style="grid-area: b" />
     <div :class="[$style.box, $style['filled--cyan-2']]" style="grid-area: c" />
     <div :class="[$style.box, $style['filled--cyan-1']]" style="grid-area: d">
@@ -83,6 +89,7 @@
 }
 
 .box {
+  overflow: hidden;
   position: relative;
   border-radius: var(--box-padding);
   padding: var(--box-padding);
@@ -94,14 +101,22 @@
   background-position: center;
   color: var(--text-color);
   gap: var(--grid-gap);
+  font-family: var(--vp-font-family-mono);
 }
 
 .box.horizontal {
   flex-direction: row;
 }
 
-a.box:hover {
-  filter: grayscale(80%);
+a.box:hover::after {
+  content: var(--link-text);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
 }
 
 .box svg {
@@ -110,7 +125,6 @@ a.box:hover {
 
 .box h1,
 .box h3 {
-  margin: 0;
   line-height: 1;
 }
 
@@ -120,18 +134,6 @@ a.box:hover {
 
 .box h3 {
   font-size: calc(var(--box-size) * 0.5);
-}
-
-.avatar {
-  --size: calc(var(--box-size) * 2.5);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .filled--cyan-1 {
