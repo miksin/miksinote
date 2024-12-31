@@ -5,27 +5,27 @@ date: 2024-12-31
 
 # Linting
 
-> AI生成摘要
+> AI Generated Summary
 
 <!-- excerpt -->
 
-本文介紹了如何在項目中設置和使用ESLint進行代碼檢查和格式化，包括安裝和配置ESLint、設置pre-commit鉤子以及在VSCode中整合ESLint。
+This article introduces how to set up and use ESLint for code checking and formatting in a project, including installing and configuring ESLint, setting up pre-commit hooks, and integrating ESLint in VSCode.
 
 <!-- excerpt -->
 
 [[toc]]
 
-## 安裝Linter
+## Installing Linter
 
-我使用[@antfu/eslint-config](https://github.com/antfu/eslint-config)，lint之外還能format
+I use [@antfu/eslint-config](https://github.com/antfu/eslint-config), which can lint and format.
 
 ```bash
 npm i -D eslint eslint-plugin-format @antfu/eslint-config
 ```
 
-### 設定ESLint
+### Configuring ESLint
 
-新增`eslint.config.mjs`
+Create `eslint.config.mjs`
 
 ```javascript
 import antfu from "@antfu/eslint-config"
@@ -50,7 +50,7 @@ export default antfu({
 })
 ```
 
-在`package.json`中增加設定
+Add settings to `package.json`
 
 ```json
 {
@@ -62,27 +62,27 @@ export default antfu({
 }
 ```
 
-執行formatter
+Run the formatter
 
 ```bash
 npm run lint:fix
 ```
 
-### TODO: 忽略code block內容
+### TODO: Ignore code block content
 
-我不希望在`.md`中檢查code block的內容，但不知道怎麼設定比較好。等我找到方法再回來更新。
+I don't want to check the content of code blocks in `.md` files, but I don't know the best way to set this up. I'll update this once I find a solution.
 
-### 設定pre-commit
+### Setting up pre-commit
 
-可以設定`pre-commit`，以後在git commit時自動format
+You can set up `pre-commit` to automatically format code when committing with git.
 
-安裝`lint-staged`, `simple-git-hooks`
+Install `lint-staged`, `simple-git-hooks`
 
 ```bash
 npm i -D lint-staged simple-git-hooks
 ```
 
-在`package.json`裡新增設定：
+Add settings to `package.json`:
 
 ```json
 {
@@ -96,15 +96,15 @@ npm i -D lint-staged simple-git-hooks
 }
 ```
 
-執行一次`simple-git-hooks`完成設定
+Run `simple-git-hooks` once to complete the setup
 
 ```bash
 npx simple-git-hooks
 ```
 
-## 整合VSCode
+## Integrating with VSCode
 
-在`.vscode/settings.json`中追加設定
+Add settings to `.vscode/settings.json`
 
 ```json
 {
@@ -119,7 +119,7 @@ npx simple-git-hooks
     "source.organizeImports": "never"
   },
 
-  // Silent the stylistic rules in you IDE, but still auto fix them
+  // Silence the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
     { "rule": "format/*", "severity": "off", "fixable": true },

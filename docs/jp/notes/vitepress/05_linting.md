@@ -5,27 +5,27 @@ date: 2024-12-31
 
 # Linting
 
-> AI生成摘要
+> AI生成の要約
 
-<!-- excerpt -->
+<!-- 抜粋 -->
 
-本文介紹了如何在項目中設置和使用ESLint進行代碼檢查和格式化，包括安裝和配置ESLint、設置pre-commit鉤子以及在VSCode中整合ESLint。
+この記事では、プロジェクトでコードチェックとフォーマットを行うためのESLintの設定と使用方法について紹介します。ESLintのインストールと設定、プリコミットフックの設定、VSCodeへの統合について説明します。
 
-<!-- excerpt -->
+<!-- 抜粋 -->
 
 [[toc]]
 
-## 安裝Linter
+## リンターのインストール
 
-我使用[@antfu/eslint-config](https://github.com/antfu/eslint-config)，lint之外還能format
+私は[@antfu/eslint-config](https://github.com/antfu/eslint-config)を使用しており、これでリンティングとフォーマットができます。
 
 ```bash
 npm i -D eslint eslint-plugin-format @antfu/eslint-config
 ```
 
-### 設定ESLint
+### ESLintの設定
 
-新增`eslint.config.mjs`
+`eslint.config.mjs`を作成します
 
 ```javascript
 import antfu from "@antfu/eslint-config"
@@ -50,7 +50,7 @@ export default antfu({
 })
 ```
 
-在`package.json`中增加設定
+`package.json`に設定を追加します
 
 ```json
 {
@@ -62,27 +62,27 @@ export default antfu({
 }
 ```
 
-執行formatter
+フォーマッターを実行します
 
 ```bash
 npm run lint:fix
 ```
 
-### TODO: 忽略code block內容
+### TODO: コードブロックの内容を無視する
 
-我不希望在`.md`中檢查code block的內容，但不知道怎麼設定比較好。等我找到方法再回來更新。
+`.md`ファイルのコードブロックの内容をチェックしたくないのですが、今のところ最適な設定方法がわかりません。解決策が見つかり次第更新します。
 
-### 設定pre-commit
+### プリコミットの設定
 
-可以設定`pre-commit`，以後在git commit時自動format
+gitでコミットする際に自動的にコードをフォーマットするために`pre-commit`を設定できます。
 
-安裝`lint-staged`, `simple-git-hooks`
+`lint-staged`と`simple-git-hooks`をインストールします
 
 ```bash
 npm i -D lint-staged simple-git-hooks
 ```
 
-在`package.json`裡新增設定：
+`package.json`に設定を追加します：
 
 ```json
 {
@@ -96,15 +96,15 @@ npm i -D lint-staged simple-git-hooks
 }
 ```
 
-執行一次`simple-git-hooks`完成設定
+セットアップを完了するために`simple-git-hooks`を一度実行します
 
 ```bash
 npx simple-git-hooks
 ```
 
-## 整合VSCode
+## VSCodeに導入
 
-在`.vscode/settings.json`中追加設定
+`.vscode/settings.json`に設定を追加します
 
 ```json
 {
