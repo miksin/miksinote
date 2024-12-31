@@ -68,6 +68,10 @@ export default antfu({
 npm run lint:fix
 ```
 
+### TODO: 忽略code block內容
+
+我不希望在`.md`中檢查code block的內容，但不知道怎麼設定比較好。等我找到方法再回來更新。
+
 ## 整合VSCode
 
 在`.vscode/settings.json`中追加設定
