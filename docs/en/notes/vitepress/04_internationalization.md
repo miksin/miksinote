@@ -1,29 +1,29 @@
 ---
-title: '多語言 & 側邊欄'
+title: 'Internationalization & Sidebar'
 date: 2024-12-31
 ---
 
-# 多語言 & 側邊欄
+# Internationalization & Sidebar
 
-> AI生成摘要
+> AI-generated summary
 
 <!-- excerpt -->
 
-本文介紹了如何在 VitePress 中設置多語言支持和自動生成側邊欄。首先，配置多語言資料夾和文件，然後在 `config.mts` 中設置語言選項。接著，安裝並配置 `vitepress-sidebar` 插件來自動生成側邊欄，並通過修改 CSS 來實現子項目的縮排效果。
+This article introduces how to set up internationalization support and automatically generate a sidebar in VitePress. First, configure the multilingual folders and files, then set the language options in `config.mts`. Next, install and configure the `vitepress-sidebar` plugin to automatically generate the sidebar, and achieve indentation for sub-items by modifying the CSS.
 
 <!-- excerpt -->
 
 [[toc]]
 
-## 多語言設定
+## Internationalization Settings
 
-### 配置資料夾與文件
+### Configure Folders and Files
 
-參考[官方文件](https://vitepress.dev/guide/i18n#internationalization)的配置，我設定了三種語言
+Refer to the [official documentation](https://vitepress.dev/guide/i18n#internationalization) for configuration. I have set up three languages:
 
-- 繁體中文 (root)
-- 英文
-- 日文
+- Traditional Chinese (root)
+- English
+- Japanese
 
 ```
 docs/
@@ -34,9 +34,9 @@ docs/
 ├─ foo.md
 ```
 
-### 設定config
+### Configure config
 
-在`docs/.vitepress/config.mts`加入設定
+Add the settings in `docs/.vitepress/config.mts`
 
 ```typescript
 export default defineConfig({
@@ -77,20 +77,19 @@ export default defineConfig({
 })
 ```
 
-## 側邊欄設定
+## Sidebar Settings
 
-雖然也能像[官方文件](https://vitepress.dev/reference/default-theme-sidebar#sidebar)一樣手動設定Sidebar的路徑，
-但每次增加修改文件都要手動同步有點不太現實，因此我選擇交給自動生成。
+Although you can manually set the Sidebar path like in the [official documentation](https://vitepress.dev/reference/default-theme-sidebar#sidebar), it is not practical to manually sync every time you add or modify files. Therefore, I chose to let it be automatically generated.
 
-### 安裝VitePress Sidebar
+### Install VitePress Sidebar
 
 ```bash
 npm i -D vitepress-sidebar
 ```
 
-### 設定config
+### Configure config
 
-一樣在`docs/.vitepress/config.mts`加入設定
+Add the settings in `docs/.vitepress/config.mts`
 
 ```typescript
 import type { DefaultTheme, UserConfig } from 'vitepress'
@@ -128,29 +127,27 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
 }]))
 ```
 
-使用了`withSidebar`並分別對三種語言做了設定，其中`resolvePath`和`basePath`比較重要。
-我也考不太清楚運作方式，總之試誤出一個正確運作的設定方式。
+Using `withSidebar`, settings were made for the three languages respectively, where `resolvePath` and `basePath` are quite important. I wasn't entirely sure how it works, but through trial and error, I found a configuration that works correctly.
 
-重開dev server後可以看到側邊欄正確顯示了！
+After restarting the dev server, you can see the sidebar displayed correctly!
 
 ```bash
 npm run docs:dev
 ```
 
-可以試著切換語言看看是否正確運作
+You can try switching languages to see if it works correctly.
 
 ![sidebar_a](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_a.webp)
 
-### 設定css
+### Configure CSS
 
-側邊欄是顯示了，但有個問題，主項目和子項目在同一個階層。
-我希望子項目可以縮排，就像這樣：
+The sidebar is displayed, but there is a problem: the main items and sub-items are on the same level. I want the sub-items to be indented, like this:
 
 ![sidebar_b](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_b.webp)
 
-所幸[官方文件](https://vitepress-sidebar.cdget.com/advanced-usage/multi-level-sidebar-with-indents#multi-level-sidebar-with-indents)有提供修改方式
+Fortunately, the [official documentation](https://vitepress-sidebar.cdget.com/advanced-usage/multi-level-sidebar-with-indents#multi-level-sidebar-with-indents) provides a way to modify it.
 
-在`docs/.vitepress/theme/style.css`中加入設定
+Add the settings in `docs/.vitepress/theme/style.css`
 
 ```css
 /**
@@ -164,7 +161,7 @@ npm run docs:dev
 }
 ```
 
-可以看到正確縮排了
+You can see the correct indentation.
 
 ![sidebar_c](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_c.webp)
 

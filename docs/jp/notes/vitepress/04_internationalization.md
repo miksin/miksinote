@@ -1,29 +1,31 @@
 ---
-title: '多語言 & 側邊欄'
+
+title: '国際化とサイドバー'
 date: 2024-12-31
+
 ---
 
-# 多語言 & 側邊欄
+# 国際化とサイドバー
 
-> AI生成摘要
+> AI生成の要約
 
 <!-- excerpt -->
 
-本文介紹了如何在 VitePress 中設置多語言支持和自動生成側邊欄。首先，配置多語言資料夾和文件，然後在 `config.mts` 中設置語言選項。接著，安裝並配置 `vitepress-sidebar` 插件來自動生成側邊欄，並通過修改 CSS 來實現子項目的縮排效果。
+この記事では、VitePressで国際化サポートを設定し、サイドバーを自動生成する方法を紹介します。まず、多言語フォルダとファイルを設定し、次に `config.mts` で言語オプションを設定します。次に、`vitepress-sidebar` プラグインをインストールして設定し、CSSを修正してサブアイテムのインデントを実現します。
 
 <!-- excerpt -->
 
 [[toc]]
 
-## 多語言設定
+## 国際化設定
 
-### 配置資料夾與文件
+### フォルダとファイルの設定
 
-參考[官方文件](https://vitepress.dev/guide/i18n#internationalization)的配置，我設定了三種語言
+設定については[公式ドキュメント](https://vitepress.dev/guide/i18n#internationalization)を参照してください。私は3つの言語を設定しました：
 
-- 繁體中文 (root)
-- 英文
-- 日文
+- 繁体字中国語（ルート）
+- 英語
+- 日本語
 
 ```
 docs/
@@ -34,9 +36,9 @@ docs/
 ├─ foo.md
 ```
 
-### 設定config
+### configの設定
 
-在`docs/.vitepress/config.mts`加入設定
+`docs/.vitepress/config.mts` に設定を追加します。
 
 ```typescript
 export default defineConfig({
@@ -77,20 +79,19 @@ export default defineConfig({
 })
 ```
 
-## 側邊欄設定
+## サイドバー設定
 
-雖然也能像[官方文件](https://vitepress.dev/reference/default-theme-sidebar#sidebar)一樣手動設定Sidebar的路徑，
-但每次增加修改文件都要手動同步有點不太現實，因此我選擇交給自動生成。
+サイドバーのパスを[公式ドキュメント](https://vitepress.dev/reference/default-theme-sidebar#sidebar)のように手動で設定することもできますが、ファイルを追加または変更するたびに手動で同期するのは現実的ではありません。そのため、自動生成することにしました。
 
-### 安裝VitePress Sidebar
+### VitePress Sidebarのインストール
 
 ```bash
 npm i -D vitepress-sidebar
 ```
 
-### 設定config
+### configの設定
 
-一樣在`docs/.vitepress/config.mts`加入設定
+`docs/.vitepress/config.mts`に設定を追加します。
 
 ```typescript
 import type { DefaultTheme, UserConfig } from 'vitepress'
@@ -128,29 +129,27 @@ export default defineConfig(withSidebar(vitePressConfigs, [{
 }]))
 ```
 
-使用了`withSidebar`並分別對三種語言做了設定，其中`resolvePath`和`basePath`比較重要。
-我也考不太清楚運作方式，總之試誤出一個正確運作的設定方式。
+`withSidebar` を使用して、3つの言語それぞれに設定を行いました。`resolvePath` と `basePath` は非常に重要です。試行錯誤の結果、正しく動作する設定を見つけました。
 
-重開dev server後可以看到側邊欄正確顯示了！
+開発サーバーを再起動すると、サイドバーが正しく表示されます！
 
 ```bash
 npm run docs:dev
 ```
 
-可以試著切換語言看看是否正確運作
+言語を切り替えて、正しく動作するか確認してください。
 
 ![sidebar_a](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_a.webp)
 
-### 設定css
+### CSSの設定
 
-側邊欄是顯示了，但有個問題，主項目和子項目在同一個階層。
-我希望子項目可以縮排，就像這樣：
+サイドバーは表示されますが、メインアイテムとサブアイテムが同じレベルにあります。サブアイテムをインデントしたい場合は、画像のようにします：
 
 ![sidebar_b](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_b.webp)
 
-所幸[官方文件](https://vitepress-sidebar.cdget.com/advanced-usage/multi-level-sidebar-with-indents#multi-level-sidebar-with-indents)有提供修改方式
+幸い、[公式ドキュメント](https://vitepress-sidebar.cdget.com/advanced-usage/multi-level-sidebar-with-indents#multi-level-sidebar-with-indents)には修正方法が記載されています。
 
-在`docs/.vitepress/theme/style.css`中加入設定
+`docs/.vitepress/theme/style.css` に設定を追加します。
 
 ```css
 /**
@@ -164,7 +163,7 @@ npm run docs:dev
 }
 ```
 
-可以看到正確縮排了
+正しいインデントが確認できます。
 
 ![sidebar_c](https://cdn.miksin.art/miksinote/img/notes/vitepress/04_internationalization/sidebar_c.webp)
 
