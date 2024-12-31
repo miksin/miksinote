@@ -34,7 +34,7 @@ After selecting the fonts, click `Get embed code`.
 
 `Embed code in the <head> of your html` is the part to be added to VitePress.
 
-```html
+```
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet"></link>
@@ -52,11 +52,11 @@ Modify the part copied from Google Fonts and add it to `docs/.vitepress/config.m
 export default defineConfig({
   // ...
   head: [
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
     [
-      'link',
-      { href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap', rel: 'stylesheet' },
+      "link",
+      { href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap", rel: "stylesheet" },
     ],
   ],
   // ...
@@ -69,21 +69,21 @@ Override `docs/.vitepress/theme/style.css`.
 
 ```css
 :root {
-  --vp-font-family-base: var(--main-font-face, 'Inter'), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --vp-font-family-mono: 'Noto Sans Mono', sans-serif;
+  --vp-font-family-base: var(--main-font-face, "Inter"), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --vp-font-family-mono: "Noto Sans Mono", sans-serif;
 }
 
-html[lang='en-US'] {
-  --main-font-face: 'Inter';
+html[lang="en-US"] {
+  --main-font-face: "Inter";
 }
 
-html[lang='zh-TW'] {
-  --main-font-face: 'Noto Sans TC';
+html[lang="zh-TW"] {
+  --main-font-face: "Noto Sans TC";
 }
 
-html[lang='ja-JP'] {
-  --main-font-face: 'Noto Sans JP';
+html[lang="ja-JP"] {
+  --main-font-face: "Noto Sans JP";
 }
 ```
 

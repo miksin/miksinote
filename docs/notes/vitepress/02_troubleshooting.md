@@ -28,7 +28,7 @@ Cannot find module 'vue' or its corresponding type declarations
 出現在一開始import vue的那一行
 
 ```typescript
-import { h } from 'vue'
+import { h } from "vue"
 ```
 
 似乎是找不到已經安裝好的vue package。但dev server和build都能正常運行，也就是說package是正常安裝的，只是VSCode偵測不到。

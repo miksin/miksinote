@@ -28,7 +28,7 @@ Cannot find module 'vue' or its corresponding type declarations
 This appears on the line where vue is first imported:
 
 ```typescript
-import { h } from 'vue'
+import { h } from "vue"
 ```
 
 It seems that the already installed vue package cannot be found. However, both the dev server and build run normally, which means the package is installed correctly, but VSCode cannot detect it.

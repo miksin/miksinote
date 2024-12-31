@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import Giscus from '@giscus/vue'
-import { useData, useRoute } from 'vitepress'
-import { computed } from 'vue'
+import Giscus from "@giscus/vue"
+import { useData, useRoute } from "vitepress"
+import { computed } from "vue"
 
 const route = useRoute()
 const { isDark, lang } = useData()
 const displayLang = computed(() => {
-  if (lang.value === 'en-US')
-    return 'en'
-  if (lang.value === 'ja-JP')
-    return 'ja'
-  return 'zh-TW'
+  if (lang.value === "en-US")
+    return "en"
+  if (lang.value === "ja-JP")
+    return "ja"
+  return "zh-TW"
 })
 </script>
 

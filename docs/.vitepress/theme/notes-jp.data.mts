@@ -1,4 +1,4 @@
-import { data, postLoader } from '../util/postLoader'
+import { data, postLoader } from "../util/postLoader"
 
-export default postLoader('jp/notes/**/*.md')
+export default postLoader("jp/notes/**/*.md")
 export { data }

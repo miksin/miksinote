@@ -45,32 +45,32 @@ export default defineConfig({
   // ...
   locales: {
     root: {
-      lang: 'zh-TW',
-      label: '繁體中文',
+      lang: "zh-TW",
+      label: "繁體中文",
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Notes', link: '/notes/vitepress', activeMatch: '^/notes' },
+          { text: "Home", link: "/" },
+          { text: "Notes", link: "/notes/vitepress", activeMatch: "^/notes" },
         ],
       },
     },
     en: {
-      lang: 'en-US',
-      label: 'English',
+      lang: "en-US",
+      label: "English",
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/en' },
-          { text: 'Notes', link: '/en/notes/vitepress', activeMatch: '^/en/notes' },
+          { text: "Home", link: "/en" },
+          { text: "Notes", link: "/en/notes/vitepress", activeMatch: "^/en/notes" },
         ],
       },
     },
     jp: {
-      lang: 'ja-JP',
-      label: '日本語',
+      lang: "ja-JP",
+      label: "日本語",
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/jp' },
-          { text: 'Notes', link: '/jp/notes/vitepress', activeMatch: '^/jp/notes' },
+          { text: "Home", link: "/jp" },
+          { text: "Notes", link: "/jp/notes/vitepress", activeMatch: "^/jp/notes" },
         ],
       },
     },
@@ -94,35 +94,35 @@ npm i -D vitepress-sidebar
 `docs/.vitepress/config.mts`に設定を追加します。
 
 ```typescript
-import type { DefaultTheme, UserConfig } from 'vitepress'
-import { defineConfig } from 'vitepress'
-import { withSidebar } from 'vitepress-sidebar'
+import type { DefaultTheme, UserConfig } from "vitepress"
+import { defineConfig } from "vitepress"
+import { withSidebar } from "vitepress-sidebar"
 
 const vitePressConfigs = {
-  title: 'miksinote',
+  title: "miksinote",
   // ...
 } satisfies UserConfig<DefaultTheme.Config>
 
 export default defineConfig(withSidebar(vitePressConfigs, [{
-  documentRootPath: '/docs',
-  scanStartPath: 'notes',
-  resolvePath: '/notes/',
+  documentRootPath: "/docs",
+  scanStartPath: "notes",
+  resolvePath: "/notes/",
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
   useFolderTitleFromIndexFile: true,
 }, {
-  documentRootPath: '/docs',
-  scanStartPath: '/en/notes',
-  resolvePath: '/en/',
-  basePath: '/',
+  documentRootPath: "/docs",
+  scanStartPath: "/en/notes",
+  resolvePath: "/en/",
+  basePath: "/",
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
   useFolderTitleFromIndexFile: true,
 }, {
-  documentRootPath: '/docs',
-  scanStartPath: '/jp/notes',
-  resolvePath: '/jp/',
-  basePath: '/',
+  documentRootPath: "/docs",
+  scanStartPath: "/jp/notes",
+  resolvePath: "/jp/",
+  basePath: "/",
   useTitleFromFileHeading: true,
   useFolderLinkFromIndexFile: true,
   useFolderTitleFromIndexFile: true,

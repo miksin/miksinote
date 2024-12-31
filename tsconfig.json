@@ -15,10 +15,9 @@
   },
   "include": [
     "**/*.md",
-    "docs/.vitepress/*.mts",
-    "docs/.vitepress/theme/*.ts",
-    "docs/.vitepress/theme/**/*.ts",
-    "docs/.vitepress/theme/**/*.vue"
+    "docs/.vitepress/**/*.mts",
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.vue"
   ],
   "exclude": [
     "node_modules",

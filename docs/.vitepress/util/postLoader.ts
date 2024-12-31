@@ -1,4 +1,4 @@
-import { createContentLoader } from 'vitepress'
+import { createContentLoader } from "vitepress"
 
 interface Post {
   title: string
@@ -16,16 +16,16 @@ export { data }
 export function postLoader(pattern: string | string[]) {
   return createContentLoader(pattern, {
     excerpt: (file) => {
-      file.excerpt = file.content.split('<!-- excerpt -->')[1]
+      file.excerpt = file.content.split("<!-- excerpt -->")[1]
     },
     transform(raw): Post[] {
       return raw
-        .filter(({ frontmatter, excerpt }) => !!frontmatter.title && !!excerpt)
+        .filter(({ frontmatter, excerpt }) => (Boolean(frontmatter.title)) && Boolean(excerpt))
         .map(({ url, frontmatter, excerpt }) => ({
-          title: frontmatter.title,
+          title: String(frontmatter.title),
           url,
           excerpt,
-          date: formatDate(frontmatter.date),
+          date: formatDate(String(frontmatter.date)),
         }))
         .sort((a, b) => b.date.time - a.date.time)
         .slice(0, 10)
@@ -33,15 +33,15 @@ export function postLoader(pattern: string | string[]) {
   })
 }
 
-function formatDate(raw: string): Post['date'] {
+function formatDate(raw: string): Post["date"] {
   const date = new Date(raw)
   date.setUTCHours(12)
   return {
     time: +date,
-    string: date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+    string: date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     }),
   }
 }

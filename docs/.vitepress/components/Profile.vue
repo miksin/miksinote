@@ -32,14 +32,14 @@
 
   display: grid;
   grid-template-areas:
-    'a a a a c c c c c c g g g g'
-    'a a a a c c c c c c g g g g'
-    'a a a a d d d d d d g g g g'
-    'a a a a d d d d d d g g g g'
-    'b b b b d d d d d d g g g g'
-    'b b b b d d d d d d g g g g'
-    'b b b b e e e e f f f f f f'
-    'b b b b e e e e f f f f f f';
+    "a a a a c c c c c c g g g g"
+    "a a a a c c c c c c g g g g"
+    "a a a a d d d d d d g g g g"
+    "a a a a d d d d d d g g g g"
+    "b b b b d d d d d d g g g g"
+    "b b b b d d d d d d g g g g"
+    "b b b b e e e e f f f f f f"
+    "b b b b e e e e f f f f f f";
   grid-auto-rows: var(--box-size);
   grid-auto-columns: var(--box-size);
   gap: var(--grid-gap);
@@ -49,17 +49,17 @@
   .grid {
     --box-size: 3rem;
     grid-template-areas:
-      'c c c c c c g g g g'
-      'c c c c c c g g g g'
-      'd d d d d d g g g g'
-      'd d d d d d g g g g'
-      'd d d d d d g g g g'
-      'd d d d d d g g g g'
-      'a a a a a b b b b b'
-      'a a a a a b b b b b'
-      'a a a a a b b b b b'
-      'e e e e f f f f f f'
-      'e e e e f f f f f f';
+      "c c c c c c g g g g"
+      "c c c c c c g g g g"
+      "d d d d d d g g g g"
+      "d d d d d d g g g g"
+      "d d d d d d g g g g"
+      "d d d d d d g g g g"
+      "a a a a a b b b b b"
+      "a a a a a b b b b b"
+      "a a a a a b b b b b"
+      "e e e e f f f f f f"
+      "e e e e f f f f f f";
   }
 }
 
@@ -67,20 +67,20 @@
   .grid {
     --box-size: 2.5rem;
     grid-template-areas:
-      'c c c c c c'
-      'c c c c c c'
-      'd d d d d d'
-      'd d d d d d'
-      'd d d d d d'
-      'd d d d d d'
-      'a a a a b b'
-      'a a a a b b'
-      'a a a a b b'
-      'e e e f f f'
-      'e e e f f f'
-      'g g g g g g'
-      'g g g g g g'
-      'g g g g g g';
+      "c c c c c c"
+      "c c c c c c"
+      "d d d d d d"
+      "d d d d d d"
+      "d d d d d d"
+      "d d d d d d"
+      "a a a a b b"
+      "a a a a b b"
+      "a a a a b b"
+      "e e e f f f"
+      "e e e f f f"
+      "g g g g g g"
+      "g g g g g g"
+      "g g g g g g";
   }
 
   .box svg:not(:nth-child(-n + 2)) {
@@ -149,6 +149,6 @@ a.box:hover::after {
 }
 
 .filled--avatar {
-  --box-bg: url('/avatar.webp');
+  --box-bg: url("/avatar.webp");
 }
 </style>

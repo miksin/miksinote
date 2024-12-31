@@ -74,8 +74,8 @@ Fill in your repository name for `repo`, and the `repo-id` and `category-id` fro
 
 ```vue
 <script lang="ts" setup>
-import Giscus from '@giscus/vue'
-import { useData, useRoute } from 'vitepress'
+import Giscus from "@giscus/vue"
+import { useData, useRoute } from "vitepress"
 
 const route = useRoute()
 const { isDark } = useData()
@@ -114,13 +114,13 @@ const { isDark } = useData()
 Add it to `docs/.vitepress/theme/index.ts`:
 
 ```typescript
-import GiscusComment from '../components/GiscusComment.vue' // [!code ++]
+import GiscusComment from "../components/GiscusComment.vue" // [!code ++]
 // ...
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      'doc-after': () => h(GiscusComment), // [!code ++]
+      "doc-after": () => h(GiscusComment), // [!code ++]
     })
   },
   // ...
@@ -139,19 +139,19 @@ Add the following lines:
 
 ```vue
 <script lang="ts" setup>
-import Giscus from '@giscus/vue'
-import { useData, useRoute } from 'vitepress'
-import { computed } from 'vue' // [!code ++]
+import Giscus from "@giscus/vue"
+import { useData, useRoute } from "vitepress"
+import { computed } from "vue" // [!code ++]
 
 const route = useRoute()
 const { isDark } = useData() // [!code --]
 const { isDark, lang } = useData() // [!code ++]
 const displayLang = computed(() => { // [!code ++]
-  if (lang.value === 'en-US') // [!code ++]
-    return 'en' // [!code ++]
-  if (lang.value === 'ja-JP') // [!code ++]
-    return 'ja' // [!code ++]
-  return 'zh-TW' // [!code ++]
+  if (lang.value === "en-US") // [!code ++]
+    return "en" // [!code ++]
+  if (lang.value === "ja-JP") // [!code ++]
+    return "ja" // [!code ++]
+  return "zh-TW" // [!code ++]
 }) // [!code ++]
 </script>
 

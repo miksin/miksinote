@@ -28,7 +28,7 @@ Cannot find module 'vue' or its corresponding type declarations
 これは、vueが最初にインポートされる行に表示されます：
 
 ```typescript
-import { h } from 'vue'
+import { h } from "vue"
 ```
 
 すでにインストールされているvueパッケージが見つからないようです。しかし、開発サーバーとビルドは正常に動作するため、パッケージは正しくインストールされていますが、VSCodeがそれを検出できません。

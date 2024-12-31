@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { data as enNotes } from '../theme/notes-en.data.mjs'
-import { data as jpNotes } from '../theme/notes-jp.data.mjs'
-import { data as rootNotes } from '../theme/notes.data.mjs'
+import { computed } from "vue"
+import { data as enNotes } from "../theme/notes-en.data.mjs"
+import { data as jpNotes } from "../theme/notes-jp.data.mjs"
+import { data as rootNotes } from "../theme/notes.data.mjs"
 
 const { locale } = defineProps({
   locale: String,
 })
 
 const notes = computed(() => {
-  if (locale === 'en') {
+  if (locale === "en") {
     return enNotes
   }
-  if (locale === 'jp') {
+  if (locale === "jp") {
     return jpNotes
   }
   return rootNotes
