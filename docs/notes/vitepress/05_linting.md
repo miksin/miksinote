@@ -9,7 +9,7 @@ date: 2024-12-28
 
 <!-- excerpt -->
 
-> 🚧 WIP 🚧
+本文介紹了如何在項目中設置和使用ESLint進行代碼檢查和格式化，包括安裝和配置ESLint、設置pre-commit鉤子以及在VSCode中整合ESLint。
 
 <!-- excerpt -->
 
@@ -71,6 +71,36 @@ npm run lint:fix
 ### TODO: 忽略code block內容
 
 我不希望在`.md`中檢查code block的內容，但不知道怎麼設定比較好。等我找到方法再回來更新。
+
+### 設定pre-commit
+
+可以設定`pre-commit`，以後在git commit時自動format
+
+安裝`lint-staged`, `simple-git-hooks`
+
+```bash
+npm i -D lint-staged simple-git-hooks
+```
+
+在`package.json`裡新增設定：
+
+```json
+{
+  // ...
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
+  }
+}
+```
+
+執行一次`simple-git-hooks`完成設定
+
+```bash
+npx simple-git-hooks
+```
 
 ## 整合VSCode
 
